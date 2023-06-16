@@ -3,11 +3,10 @@
   hosts: all
   tasks: 
   import_module:
-  
-  - name: aixpert.py
+     name: aixpert.py
   # ansible.builtin.script:
   #executable: python3
   #cmd: aixpert.py
   
-  collections:
-  - ibm.power_aix
+     collections:
+      - ibm.power_aix
