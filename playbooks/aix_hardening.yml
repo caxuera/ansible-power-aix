@@ -2,10 +2,12 @@
 - name: "Run AIXPERT script"
   hosts: all
   tasks: 
-  - name: run aixpert.py script
+  import_module:
+  
+  - name: aixpert.py
   # ansible.builtin.script:
-  executable: python3
-  cmd: aixpert.py
+  #executable: python3
+  #cmd: aixpert.py
   
   collections:
   - ibm.power_aix
