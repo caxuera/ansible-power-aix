@@ -17,7 +17,7 @@
    # yum:
     #  name: "wget"
      # state: latest
-   - name: "FLRTVC"
+   - name: FLRTVC
     flrtvc:
       path: "{{ path }}"
       verbose: yes
