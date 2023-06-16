@@ -1,6 +1,6 @@
 ---
 - name: "Save default level rules in normal format"
-hosts : all
+hosts: all
   aixpert:
     mode: save
     level: default
