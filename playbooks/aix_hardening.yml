@@ -1,15 +1,4 @@
 ---
-# - name: "AIX HARDENING"
- # hosts: all
-  #gather_facts: no
-  #collections:
-  #- ibm.power_aix
-  #tasks:
-
-# CHECK VULNERABILITIES
-   #   - name: run aixpert.py script
-    #  cmd: aixpert.py
-      
 - name: "Save default level rules in normal format"
   aixpert:
     mode: save
