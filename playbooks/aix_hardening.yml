@@ -6,7 +6,7 @@
   tasks:
 
 # CHECK VULNERABILITIES
-  - import_module:
+  - import_plugins:
      name: aixpert.py
   #ansible.builtin.script:
   #executable: python3
