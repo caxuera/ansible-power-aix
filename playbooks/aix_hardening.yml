@@ -1,10 +1,14 @@
 ---
 - name: "Run AIXPERT script"
   hosts: all
-  tasks: 
-  import_module:
+  collections:
+  - ibm.power_aix
+  tasks:
+
+# CHECK VULNERABILITIES
+  - import_module:
      name: aixpert.py
-  # ansible.builtin.script:
+  #ansible.builtin.script:
   #executable: python3
   #cmd: aixpert.py
   
