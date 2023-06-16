@@ -1,1 +1,23 @@
-    
+    - name: "Save default level rules in normal format"
+  aixpert:
+    mode: save
+    level: default
+    norm_fmt_file: /home/kavana/norm.xml
+
+- name: "Apply using saved profile"
+  aixpert:
+    mode: apply
+    profile: /home/kavana/norm.xml
+
+- name: "Undo the settings"
+  aixpert:
+    mode: undo
+
+- name: "Check the settings match the provided profile"
+  aixpert:
+    mode: check
+    profile: /home/kavana/high.xml
+
+- name: "Query the settings"
+  aixpert:
+    mode: query
