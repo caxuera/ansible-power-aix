@@ -12,7 +12,7 @@
   collections:
   - ibm.power_aix
 
-  #tasks:
+  tasks:
   #- name: Check for wget command
    # yum:
     #  name: "wget"
