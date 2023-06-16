@@ -3,7 +3,7 @@
   hosts: all
   tasks: 
   - name: run aixpert.py script
-  ansible.builtin.script:
+  # ansible.builtin.script:
   executable: python3
   cmd: aixpert.py
   
