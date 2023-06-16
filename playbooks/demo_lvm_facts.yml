@@ -1,6 +1,6 @@
 ---
 - name: "Print the LVM related information"
-  hosts: quimby05
+  hosts: aix
   gather_facts: yes
   vars:
     log_file: "/tmp/ansible_lvmfacts_debug.log"
