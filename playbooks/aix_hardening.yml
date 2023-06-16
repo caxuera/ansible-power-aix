@@ -12,5 +12,5 @@
   #executable: python3
   #cmd: aixpert.py
   
-     collections:
-      - ibm.power_aix
+     #collections:
+      #- ibm.power_aix
