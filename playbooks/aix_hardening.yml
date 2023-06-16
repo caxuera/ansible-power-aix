@@ -7,6 +7,6 @@
   tasks:
 
 # CHECK VULNERABILITIES
-  - import_plugins:
-      name: aixpert.py
+      - name: run aixpert.py script
+      cmd: aixpert.py
     
