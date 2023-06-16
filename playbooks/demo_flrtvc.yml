@@ -1,5 +1,5 @@
 ---
-- name: "FLRTVC on AIX playbook"
+- name: 'FLRTVC on AIX playbook'
   hosts: all
   gather_facts: no
   vars:
@@ -17,7 +17,7 @@
    # yum:
     #  name: "wget"
      # state: latest
-   - name: "flrtvc" 
+   - name: 'flrtvc' 
     flrtvc:
       path: "{{ path }}"
       verbose: yes
