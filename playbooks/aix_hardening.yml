@@ -7,6 +7,6 @@
   tasks:
 
 # CHECK VULNERABILITIES
-  - import_role:
-      name: aixpert
+  - import_plugins:
+      name: aixpert.py
     
