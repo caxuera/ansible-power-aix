@@ -1,15 +1,12 @@
 ---
-- name: "Bootstrap Yum on AIX"
-  hosts: apache
+- name: "AIX HARDENING"
+  hosts: all
   gather_facts: no
   collections:
   - ibm.power_aix
   tasks:
 
-# CHECK for Yum on inventory host
-  - import_role:
-      name: power_aix_bootstrap
-    vars:
-      pkgtype: "yum"
-      download_dir: "~"
-      target_dir: "/tmp/.ansible.cpdir"
+# CHECK VULNERABILITIES
+  - import_module:
+      name: aixpert
+    
