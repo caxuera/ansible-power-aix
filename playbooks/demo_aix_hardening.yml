@@ -1,4 +1,5 @@
-    - name: "Save default level rules in normal format"
+---
+- name: "Save default level rules in normal format"
   aixpert:
     mode: save
     level: default
