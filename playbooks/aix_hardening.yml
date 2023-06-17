@@ -6,8 +6,11 @@
   - ibm.power_aix
 
   tasks:
-  - name: "Check current security rule applied"
+  - name: "Check current security rules applied"
     command: aixpert -t 
+
+  - name: "Check Trusted Execution Services"
+    command: trustchk -p
 
 
 
