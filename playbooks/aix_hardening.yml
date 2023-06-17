@@ -4,6 +4,10 @@
   gather_facts: no
   collections:
   - ibm.power_aix
-  command: aixpert -t
+
+  tasks:
+  - name: "RUN AIXPERT SCRIPT"
+    command: aixpert -t 
+
 
 
