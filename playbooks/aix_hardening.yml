@@ -8,6 +8,8 @@
 # CHECK VULNERABILITIES
   - import_plugins:
      name: aixpert.py
+     ansible.builtin.import_playbook module
+     
   #ansible.builtin.script:
   #executable: python3
   #cmd: aixpert.py
