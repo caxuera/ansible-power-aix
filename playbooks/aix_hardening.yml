@@ -6,7 +6,13 @@
   tasks:
 
 # CHECK VULNERABILITIES
-  - import_plugins:
-     name: aixpert.py
-     ansible.builtin.import_playbook module
+  #- import_plugins:
+   #  name: aixpert.py
+    # ansible.builtin.import_playbook module
+     
+- name: 'Run AIXPERT script'
+  hosts: all
+  tasks: 
+  cmd: aixpert -t
+
 
