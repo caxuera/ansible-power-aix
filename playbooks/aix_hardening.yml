@@ -6,7 +6,7 @@
   - ibm.power_aix
 
   tasks:
-  - name: "RUN AIXPERT SCRIPT"
+  - name: "Check current security rule applied"
     command: aixpert -t 
 
 
