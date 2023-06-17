@@ -1,6 +1,7 @@
 ---
 - name: "Run AIXPERT script"
   hosts: all
+  gather_facts: no
   collections:
   - ibm.power_aix
   cmd: aixpert -t
