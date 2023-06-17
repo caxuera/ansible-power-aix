@@ -4,6 +4,6 @@
   gather_facts: no
   collections:
   - ibm.power_aix
-  cmd: aixpert -t
+  command: aixpert -t
 
 
