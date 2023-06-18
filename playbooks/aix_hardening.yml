@@ -14,7 +14,7 @@
     #    var: ansible_facts.lpar
 
   - name: "Check oslevel"
-    shell: "oslevel -s
+    shell: "oslevel -s"
         
   - name: "Check Trusted Execution Services"
     command: trustchk -p
