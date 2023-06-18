@@ -7,11 +7,12 @@
   - ibm.power_aix
 
   tasks:
-  - name: "LPAR information"
-      ibm.power_aix.lpar_facts:
-    - name: Print the LPAR related information
-      debug:
-        var: ansible_facts.lpar
+  #- name: "LPAR information"
+   #   ibm.power_aix.lpar_facts:
+   
+  #- name: Print the LPAR related information
+   #   debug:
+    #    var: ansible_facts.lpar
         
   - name: "Check Trusted Execution Services"
     command: trustchk -p
