@@ -12,6 +12,7 @@
     register: output
   
   - name: "Check current security rules applied"
+    ibm.power_aix.flrtvc:
     command: aixpert -t 
 
   - name: "Check Trusted Execution Services"
