@@ -17,7 +17,7 @@
   - name: "Check current security rules applied"
     command: aixpert -t 
 
-  - name: "Check FLRTVC
+  - name: "Check FLRTVC"
     ibm.power_aix.flrtvc:
 
 
