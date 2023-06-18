@@ -6,7 +6,6 @@
   - ibm.power_aix
 
   tasks:
-
   - name: "Check oslevel of AIX system"
     shell: "oslevel -s"
 
