@@ -1,7 +1,7 @@
 ---
 - name: "Check oslevel of AIX system" 
   hosts: all
-  gather_facts: yes
+  gather_facts: no
   collections:
   - ibm.power_aix
 
@@ -14,8 +14,7 @@
     #    var: ansible_facts.lpar
 
   - name: "Check oslevel"
-    shell: "oslevel -s"
-    print: stdout
+    shell: "oslevel -s
         
   - name: "Check Trusted Execution Services"
     command: trustchk -p
@@ -23,8 +22,8 @@
   - name: "Check current security rules applied"
     command: aixpert -t 
 
-  - name: "Check FLRTVC"
-    ibm.power_aix.flrtvc:
+  #- name: "Check FLRTVC"
+   # ibm.power_aix.flrtvc:
 
 
 
