@@ -9,7 +9,6 @@
 
   - name: Check oslevel of AIX system
     shell: "oslevel -s"
-    when: ansible_distribution == 'AIX'
     register: output
   - debug: var=output
   
