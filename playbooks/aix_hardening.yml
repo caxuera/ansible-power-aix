@@ -7,16 +7,18 @@
 
   tasks:
 
-  - name: Check oslevel of AIX system
+  - name: "Check oslevel of AIX system"
     shell: "oslevel -s"
-    register: output
+    state: present 
 
   - name: "Check Trusted Execution Services"
     command: trustchk -p
   
   - name: "Check current security rules applied"
+    command: aixpert -t 
+
+  - name: "Check FLRTVC
     ibm.power_aix.flrtvc:
-   # command: aixpert -t 
 
 
 
