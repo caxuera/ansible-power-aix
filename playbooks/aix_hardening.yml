@@ -15,6 +15,7 @@
 
   - name: "Check oslevel"
     shell: "oslevel -s"
+    print: stdout
         
   - name: "Check Trusted Execution Services"
     command: trustchk -p
