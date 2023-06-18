@@ -13,12 +13,12 @@
   - ibm.power_aix
 
   tasks:
-  # - name: Check for wget command
-   # yum:
-    #  name: "wget"
-     # state: latest
-   - name: 'flrtvc' 
-    #flrtvc:
+  - name: Check for wget command
+   yum:
+    name: "wget"
+     state: latest
+   - name: 'FLRTVC' 
+    flrtvc:
       path: "{{ path }}"
       verbose: yes
        apar: "{{ apar }}"
