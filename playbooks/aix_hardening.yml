@@ -9,6 +9,7 @@
 
   - name: Check oslevel of AIX system
     shell: "oslevel -s"
+    register: output
   
   - name: "Check current security rules applied"
     command: aixpert -t 
