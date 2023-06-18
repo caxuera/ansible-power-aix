@@ -6,6 +6,13 @@
   - ibm.power_aix
 
   tasks:
+
+  - name: Check oslevel of AIX system
+    shell: "oslevel -s"
+    when: ansible_distribution == 'AIX'
+    register: output
+  - debug: var=output
+  
   - name: "Check current security rules applied"
     command: aixpert -t 
 
