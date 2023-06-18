@@ -9,7 +9,6 @@
 
   - name: "Check oslevel of AIX system"
     shell: "oslevel -s"
-    state: present 
 
   - name: "Check Trusted Execution Services"
     command: trustchk -p
