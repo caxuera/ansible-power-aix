@@ -1,14 +1,12 @@
 ---
-- name: "Run AIXPERT script"
+- name: "Check oslevel of AIX system" 
   hosts: all
-  gather_facts: no
+  gather_facts: yes
+  shell: "oslevel -s"
   collections:
   - ibm.power_aix
 
   tasks:
-  - name: "Check oslevel of AIX system"
-    shell: "oslevel -s"
-
   - name: "Check Trusted Execution Services"
     command: trustchk -p
   
