@@ -1,5 +1,5 @@
 ---
-- name: "Check oslevel of AIX system" 
+- name: "AIX CHECK HARDENING" 
   hosts: all
   gather_facts: no
   collections:
