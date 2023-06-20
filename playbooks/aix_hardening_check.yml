@@ -28,7 +28,7 @@
 
   - name: "Show Truted Execution Results"
     debug:
-      var: stderr
+      var: stderr_lines
 
   - name: "Set result"
     set_fact:
