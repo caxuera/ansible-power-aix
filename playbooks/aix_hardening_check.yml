@@ -30,12 +30,21 @@
     debug:
       var: stderr_lines
 
-  - name: "Set result"
+  - name: "Set TE Results"
     set_fact:
       result:  "{{ stderr_lines }}"
   
   - name: Check current security rules applied
     command: aixpert -t 
+    register: stderr
+
+  - name: "Show AIXPERT Results"
+    debug:
+      var: stderr
+
+  - name: "Set AIXPERT Results"
+    set_fact: 
+      result:  "{{stderr}}"
 
   #- name: Gather the health check information
    # register: result
