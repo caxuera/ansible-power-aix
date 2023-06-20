@@ -24,7 +24,7 @@
         
   - name: Check Trusted Execution Services
     command: trustchk -p
-    register: stderr
+    register: stderr_lines
 
   - name: "Show Truted Execution Results"
     debug:
