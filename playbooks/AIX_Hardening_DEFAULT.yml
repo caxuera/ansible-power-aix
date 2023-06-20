@@ -1,1 +1,6 @@
 ---
+- name: "AIX HARDENING DEFAULT" 
+  hosts: all
+  gather_facts: no
+  collections:
+  - ibm.power_aix---
