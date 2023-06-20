@@ -22,10 +22,10 @@
       #when:
        # - ansible_system == "AIX"
         
-  - name: "Check Trusted Execution Services"
+  - name: Check Trusted Execution Services
     command: trustchk -p
   
-  - name: "Check current security rules applied"
+  - name: Check current security rules applied
     command: aixpert -t 
 
   #- name: Gather the health check information
