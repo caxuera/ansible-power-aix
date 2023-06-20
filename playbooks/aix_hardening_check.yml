@@ -55,4 +55,4 @@
      #    var=result
 
   - name: "Check FLRTVC"
-   ibm.power_aix.aixpert:
+   ibm.power_aix.flrtvc:
