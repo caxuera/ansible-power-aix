@@ -9,8 +9,8 @@
   - name: "Collect OS version for host {{ inventory_hostname }}"
     command: "oslevel -s"
     register: oslevel_info
-    when:
-     - ansible_system == "AIX"
+    #when:
+     #- ansible_system == "AIX"
         
   - name: "Show oslevel output"
     debug:
@@ -19,8 +19,8 @@
   - name: "Set os_level fact from registered output"
     set_fact:
       os_level: "{{ oslevel_info.stdout }}"
-    when:
-     - ansible_system == "AIX"
+    #when:
+     #- ansible_system == "AIX"
         
   - name: Check Trusted Execution Services
     command: trustchk -p
