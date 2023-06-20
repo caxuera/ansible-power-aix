@@ -21,6 +21,8 @@
       #   os_level: "{{ oslevel_info.stdout }}"
       #when:
        # - ansible_system == "AIX"
+    
+    tasks:
         
   - name: "Check Trusted Execution Services"
     command: trustchk -p
