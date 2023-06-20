@@ -46,5 +46,5 @@
     set_fact: 
       result:  "{{stderr}}"
 
-  - name: Check FLRTV
+  - name: "Check FLRTVC"
     ibm.power_aix.flrtvc:
