@@ -5,7 +5,7 @@
   collections:
   - ibm.power_aix
 
-    tasks:
+  tasks:
    # - name: "Collect OS version for host {{ inventory_hostname }}"
     #  command: "oslevel -s"
      # register: oslevel_info
