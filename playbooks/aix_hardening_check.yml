@@ -6,17 +6,17 @@
   - ibm.power_aix
 
     tasks:
-    - name: Collect OS version for host {{ inventory_hostname }}
+    - name: "Collect OS version for host {{ inventory_hostname }}"
       command: "oslevel -s"
       register: oslevel_info
       when:
         - ansible_system == "AIX"
         
-    - name: Show oslevel output
+    - name: "Show oslevel output"
       debug:
         var: oslevel_info
       
-    - name: Set os_level fact from registered output
+    - name: "Set os_level fact from registered output"
       set_fact:
          os_level: "{{ oslevel_info.stdout }}"
       when:
