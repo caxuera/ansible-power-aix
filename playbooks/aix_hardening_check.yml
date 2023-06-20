@@ -24,6 +24,8 @@
         
   - name: Check Trusted Execution Services
     command: trustchk -p
+    set_fact:
+      result:  "{{ result.stderr }}"
   
   - name: Check current security rules applied
     command: aixpert -t 
