@@ -54,5 +54,5 @@
     #debug:
      #    var=result
 
-  #- name: "Check FLRTVC"
-   # ibm.power_aix.flrtvc:
+  - name: "Check FLRTVC"
+   ibm.power_aix.aixpert:
