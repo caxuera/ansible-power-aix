@@ -32,7 +32,7 @@
 
   - name: "Set result"
     set_fact:
-      result:  "{{ stderr }}"
+      result:  "{{ stderr_lines }}"
   
   - name: Check current security rules applied
     command: aixpert -t 
