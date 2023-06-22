@@ -46,17 +46,25 @@
     set_fact: 
       result:  "{{stderr}}"
 
-   # CHECK for Yum on inventory host
-  - name: Check for existence of yum
-    raw: "rpm -q --quiet yum && echo true || echo false"
-    register: yum_exists
+  # CHECK for Yum on inventory host
+  - import_role:
+      name: power_aix_bootstrap
+    vars:
+      pkgtype: "yum"
+      download_dir: "~"
+      target_dir: "/tmp/.ansible.cpdir"
 
-  - name: End play if inventory host has yum installed
-    meta: end_host
-    when: yum_exists.stdout is search("true")
+  # # CHECK for Yum on inventory host
+  #- name: Check for existence of yum
+   # raw: "rpm -q --quiet yum && echo true || echo false"
+    #register: yum_exists
 
-  - name: Install aixpert.py onto target
-    copy:
-     src: aixpert.py
-     dest: /usr/bin/aixpert.py
-     mode: '0755'
+  #- name: End play if inventory host has yum installed
+   # meta: end_host
+    #when: yum_exists.stdout is search("true")
+
+  #- name: Install aixpert.py onto target
+   # copy:
+    # src: aixpert.py
+     #dest: /usr/bin/aixpert.py
+     #mode: '0755'
