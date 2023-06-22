@@ -49,6 +49,6 @@
   tasks:
   - name: Install aixpert.py onto target
     copy:
-     src: /root/.ansible/collections/ansible_collections/ibm/power_aix/plugins/modules/aixpert.py
+     remote_src: /root/.ansible/collections/ansible_collections/ibm/power_aix/plugins/modules/aixpert.py
      dest: /usr/bin/aixpert.py
      mode: '0755'
