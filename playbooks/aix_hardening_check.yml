@@ -50,5 +50,5 @@ tasks:
   - name: Install aixpert.py onto target
     copy:
      src: aixpert.py
-     dest: /usr/sbin/vioshc.py
+     dest: /usr/sbin/aixpert.py
      mode: '0755'
