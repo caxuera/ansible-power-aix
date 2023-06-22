@@ -3,4 +3,9 @@
   hosts: all
   gather_facts: no
   collections:
-  - ibm.power_aix---
+  - ibm.power_aix
+
+  tasks:
+  - name: "Run AIXPERT DEFAULT SECURITYRULES for host {{ inventory_hostname }}"
+    command: "aixpert -l default"
+    register: stderr
