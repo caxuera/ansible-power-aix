@@ -58,6 +58,7 @@
   - name: Check for existence of yum
     raw: "rpm -q --quiet yum && echo true || echo false"
     register: yum_exists
+    result:    "{{stdout}}"
 
   #- name: End play if inventory host has yum installed
    # meta: end_host
