@@ -1,18 +1,8 @@
 ---
 - name: "FLRTVC on AIX"
   hosts: all
-  gather_facts: no
-  collections:
-  - ibm.power_aix
-  
-  vars:
-    apar: sec
-    path: /usr/sys/inst.images
-    check: no
-    download_only: yes
-    extend: yes
-    
-   # Become root user
+      
+# Become root user
    become: yes
    # List of tasks to be executed
    tasks:
