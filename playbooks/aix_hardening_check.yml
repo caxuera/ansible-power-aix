@@ -49,6 +49,6 @@
   tasks:
   - name: Install aixpert.py onto target
     copy:
-     src: /var/lib/awx/projects/plugins/aixpert.py
+     remote_src: /var/lib/awx/projects/plugins/aixpert.py
      dest: /usr/bin/aixpert.py
      mode: '0755'
