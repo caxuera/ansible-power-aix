@@ -46,7 +46,15 @@
     set_fact: 
       result:  "{{stderr}}"
 
- 
+   # CHECK for Yum on inventory host
+  - name: Check for existence of yum
+    raw: "rpm -q --quiet yum && echo true || echo false"
+    register: yum_exists
+
+  - name: End play if inventory host has yum installed
+    meta: end_host
+    when: yum_exists.stdout is search("true")
+
   - name: Install aixpert.py onto target
     copy:
      src: aixpert.py
