@@ -46,7 +46,7 @@
     set_fact: 
       result:  "{{stderr}}"
 
-tasks:
+  tasks:
   - name: Install aixpert.py onto target
     copy:
      src: aixpert.py
