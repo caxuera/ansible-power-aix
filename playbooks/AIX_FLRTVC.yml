@@ -1,1 +1,36 @@
 ---
+#- name: "NIM FLRTVC on AIX playbook"
+ # hosts: all
+  #gather_facts: no
+  #tasks:
+   # - name: "FLRTVC"
+    #  aix_flrtvc:
+     #   targets: 'ansible-4-ansible-tower'
+      #  path: /usr/sys/inst.images
+       # verbose: yes
+        #apar: all
+        #force: no
+        #clean: False
+        #download_only: no
+      #register: result
+    #- debug: var=result
+
+- name: "FLRTVC on AIX playbook"
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: "FLRTVC"
+      aix_flrtvc:
+        targets: ansible-4-ansible-tower
+        #quimby-vios* master
+        path: /flrtvc-ansible
+        #verbose: yes
+        #apar: hiper
+        #csv: /apar.csv
+        #filesets: devices
+        #check_only: no
+        #download_only: no
+        #clean: no
+        #force: no
+      register: result
+    - debug: var=result
