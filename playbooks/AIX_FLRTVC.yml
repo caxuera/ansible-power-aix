@@ -12,8 +12,8 @@
   collections:
   - ibm.power_aix
 
-  #tasks:
-  #- name: Check for wget command
+  tasks:
+  - name: Check for wget command
    #yum:
     #name: "wget"
      #state: latest
