@@ -49,6 +49,6 @@
   tasks:
   - name: Install aixpert.py onto target
     copy:
-     src: aixpert.py
+     remote_src: aixpert.py
      dest: /usr/bin/aixpert.py
      mode: '0755'
