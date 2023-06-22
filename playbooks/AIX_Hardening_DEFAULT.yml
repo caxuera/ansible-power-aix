@@ -10,6 +10,10 @@
     command: "aixpert -l default"
     register: stderr
 
-    - name: "Show AIXPERT DEFAULT Results"
+  - name: "Show AIXPERT DEFAULT Results"
     debug:
       var: stderr
+
+  - name: "Set AIXPERT DEFAULT Results"
+    set_fact: 
+      result:  "{{stderr}}"
