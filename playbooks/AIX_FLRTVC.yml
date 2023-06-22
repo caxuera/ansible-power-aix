@@ -14,7 +14,7 @@
 
   tasks:
   - name: "Check for wget command"
-   #yum:
+    yum:
     #name: "wget"
      #state: latest
      
