@@ -6,6 +6,6 @@
   - ibm.power_aix
 
   tasks:
-  - name: "Run AIXPERT DEFAULT SECURITYRULES for host {{ inventory_hostname }}"
+  - name: "Run AIXPERT DEFAULT SECURIT YRULES for host {{ inventory_hostname }}"
     command: "aixpert -l default"
     register: stderr
