@@ -59,6 +59,10 @@
     raw: "rpm -q --quiet yum && echo true || echo false"
     register: yum_exists
 
+  - name: "Show YUM check"
+    debug: 
+      var: yum_exists
+
   - name: "Show YUM results"
     set_fact:
       result:  "{{yum_exists.stdout}}"
