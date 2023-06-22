@@ -3,7 +3,7 @@
   hosts: all
       
 # Become root user
-   become: yes
+   #become: yes
    # List of tasks to be executed
    tasks:
    - yum:
