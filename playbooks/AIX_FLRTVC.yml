@@ -7,15 +7,15 @@
   
   tasks:
   - name: "FLRTVC"
-    aix_flrtvc:
-    targets: 'ansible-4-ansible-tower'
-    path: /usr/sys/inst.images
-    verbose: yes
-    apar: all
-    force: no
-    clean: False
-    check_only: yes
+      aix_flrtvc:
+      targets: 'ansible-4-ansible-tower'
+      path: /usr/sys/inst.images
+      verbose: yes
+      apar: all
+      force: no
+      clean: False
+      check_only: yes
         #download_only: no
-    register: result
-    debug: 
-      var=result
+      register: result
+      debug: 
+        var=result
