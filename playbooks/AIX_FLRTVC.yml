@@ -1,21 +1,32 @@
 ---
-- name: "FLRTVC on AIX playbook"
+- name: 'FLRTVC on AIX playbook'
   hosts: all
   gather_facts: no
+  vars:
+    apar: sec
+    path: /usr/sys/inst.images
+    check: no
+    download_only: yes
+    extend: yes
+
   collections:
   - ibm.power_aix
-  
+
   tasks:
-  - name: "FLRTVC"
-      ibm.power_aix.aix_flrtvc:
-      targets: 'ansible-4-ansible-tower'
-      path: /usr/sys/inst.images
+  - name: Check for wget command
+   yum:
+    name: "wget"
+     state: latest
+   - name: 'FLRTVC' 
+    flrtvc:
+      path: "{{ path }}"
       verbose: yes
-      apar: all
-      force: no
-      clean: False
-      check_only: yes
-        #download_only: no
-      register: result
-      debug: 
-        var=result
+       apar: "{{ apar }}"
+       force: no
+       clean: False
+       check_only: "{{ check }}"
+       download_only: "{{ download_only }}"
+       extend_fs: "{{ extend }}"
+     register: result
+   - debug: var=result
+   
