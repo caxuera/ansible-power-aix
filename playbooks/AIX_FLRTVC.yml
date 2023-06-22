@@ -1,11 +1,11 @@
 ---
 - name: "FLRTVC on AIX playbook"
-  hosts: fattony01
+  hosts: all
   gather_facts: no
   tasks:
     - name: "FLRTVC"
       aix_flrtvc:
-        targets: quimby01
+        targets: aix-4-ansible-tower
         #quimby-vios* master
         path: /flrtvc-ansible
         #verbose: yes
