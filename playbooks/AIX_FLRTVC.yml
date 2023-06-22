@@ -18,15 +18,15 @@
     #name: "wget"
      #state: latest
    - name: 'FLRTVC' 
-    flrtvc:
-      path: "{{ path }}"
-      verbose: yes
-       apar: "{{ apar }}"
-       force: no
-       clean: False
-       check_only: "{{ check }}"
-       download_only: "{{ download_only }}"
-       extend_fs: "{{ extend }}"
+     flrtvc:
+     path: "{{ path }}"
+     verbose: yes
+     apar: "{{ apar }}"
+     force: no
+     clean: False
+     check_only: "{{ check }}"
+     download_only: "{{ download_only }}"
+     extend_fs: "{{ extend }}"
      register: result
-   - debug: var=result
+   #- debug: var=result
    
