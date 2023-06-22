@@ -13,12 +13,12 @@
   - ibm.power_aix
 
   tasks:
-  - name: Check for wget command
+  - name: "Check for wget command"
    #yum:
     #name: "wget"
      #state: latest
      
-  - name: FLRTVC 
+  - name: "Show FLRTVC" 
     # flrtvc:
      #path: "{{ path }}"
      #verbose: yes
