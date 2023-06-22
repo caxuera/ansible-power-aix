@@ -30,7 +30,7 @@
     debug:
       var: stderr_lines
 
-  - name: "Set TE Results"
+  - name: "Show TE Results"
     set_fact:
       result:  "{{ stderr_lines }}"
   
