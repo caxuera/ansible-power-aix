@@ -7,7 +7,7 @@
   
   tasks:
   - name: "FLRTVC"
-      aix_flrtvc:
+      ibm.power_aix.aix_flrtvc:
       targets: 'ansible-4-ansible-tower'
       path: /usr/sys/inst.images
       verbose: yes
