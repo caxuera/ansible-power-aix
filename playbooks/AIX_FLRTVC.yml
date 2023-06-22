@@ -1,8 +1,8 @@
 ---
-#- name: "NIM FLRTVC on AIX playbook"
- # hosts: all
-  #gather_facts: no
-  #tasks:
+- name: "FLRTVC on AIX playbook"
+  hosts: all
+  gather_facts: no
+  tasks:
    # - name: "FLRTVC"
     #  aix_flrtvc:
      #   targets: 'ansible-4-ansible-tower'
