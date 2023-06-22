@@ -1,11 +1,20 @@
 ---
-- name: "FLRTVC on AIX"
-  hosts: all
-      
-# Become root user
-   #become: yes
-   # List of tasks to be executed
-   tasks:
-   - yum:
-       name=wget
-       state=present
+- name: "FLRTVC on AIX playbook"
+  hosts: fattony01
+  gather_facts: no
+  tasks:
+    - name: "FLRTVC"
+      aix_flrtvc:
+        targets: quimby01
+        #quimby-vios* master
+        path: /flrtvc-ansible
+        #verbose: yes
+        #apar: hiper
+        #csv: /apar.csv
+        #filesets: devices
+        #check_only: no
+        #download_only: no
+        #clean: no
+        #force: no
+      register: result
+    - debug: var=result
