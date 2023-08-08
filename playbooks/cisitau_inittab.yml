@@ -4,7 +4,8 @@
   gather_facts: no
   collections:
   - ibm.power_aix
-  
+
+  tasks:
 - name: "Check daemons enabled on innitab"
   command: lsitab {{ item }}
   loop:
