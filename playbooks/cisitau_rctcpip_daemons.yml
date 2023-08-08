@@ -1,4 +1,11 @@
 ---
+- name: "AIX-CIS-BENCHMARK" 
+  hosts: all
+  gather_facts: no
+  collections:
+  - ibm.power_aix
+
+  tasks:
  - name: Disable daemons from /etc/rc.tcpip
      lineinfile:
        path: /etc/rc.tcpip
