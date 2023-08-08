@@ -12,8 +12,9 @@
     - writesrv
     - i4ls
     - pmd
-    - httpdlit
-    - rcns
+    - httpdlite
+    - rcnfs
+    - rcncs
     - qdaemon
     - lpd
     - piobe
