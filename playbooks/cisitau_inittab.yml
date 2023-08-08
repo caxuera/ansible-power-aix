@@ -7,8 +7,8 @@
 
   tasks:
   - name: "Check daemons enabled on innitab"
-  command: lsitab {{ item }}
-  loop:
+    command: lsitab {{ item }}
+    loop:
    - writesrv
    - i4ls
    - pmd
@@ -18,13 +18,13 @@
    - lpd
    - piobe
    - dt
-  register: lsitab
-  ignore_errors: yes
-  changed_when: false
+    register: lsitab
+    ignore_errors: yes
+    changed_when: false
 
    - name: "Remove daemons from inittab"
-   command: rmitab {{ item.item }}
-   loop: "{{ lsitab.results }}"
-   when: item.rc == 0
-   loop_control:
-   label: "{{ item.item }}"
+     command: rmitab {{ item.item }}
+     loop: "{{ lsitab.results }}"
+     when: item.rc == 0
+     loop_control:
+     label: "{{ item.item }}"
