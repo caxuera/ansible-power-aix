@@ -1,4 +1,10 @@
 ---
+- name: "AIX-CIS-BENCHMARK" 
+  hosts: all
+  gather_facts: no
+  collections:
+  - ibm.power_aix
+  
 - name: "Check daemons enabled on innitab"
   command: lsitab {{ item }}
   loop:
