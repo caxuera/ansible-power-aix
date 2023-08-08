@@ -6,7 +6,7 @@
   - ibm.power_aix
 
   tasks:
-- name: "Check daemons enabled on innitab"
+  - name: "Check daemons enabled on innitab"
   command: lsitab {{ item }}
   loop:
    - writesrv
@@ -22,7 +22,7 @@
   ignore_errors: yes
   changed_when: false
 
- - name: "Remove daemons from inittab"
+   - name: "Remove daemons from inittab"
    command: rmitab {{ item.item }}
    loop: "{{ lsitab.results }}"
    when: item.rc == 0
