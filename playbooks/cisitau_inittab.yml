@@ -1,5 +1,5 @@
 ---
-- name: Remove daemons from inittab
+- name: "Remove daemons from inittab"
   command: rmitab {{ item.item }}
   loop: "{{ lsitab.results }}"
   when: item.rc == 0
