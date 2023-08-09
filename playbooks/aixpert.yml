@@ -4,6 +4,8 @@
   gather_facts: no
   collections:
   - ibm.power_aix
+
+  tasks:
   
 - name: "Save default level rules in normal format"
   aixpert:
