@@ -21,11 +21,11 @@
   #aixpert:
    # mode: undo
 
-  - name: "Check the settings match the provided profile"
-  aixpert:
-    mode: check
-    profile: /home/mtesta/high.xml
+  #- name: "Check the settings match the provided profile"
+  #aixpert:
+   # mode: check
+    #profile: /home/mtesta/high.xml
 
-  - name: "Query the settings"
-  aixpert:
-    mode: query
+  #- name: "Query the settings"
+  #aixpert:
+   # mode: query
