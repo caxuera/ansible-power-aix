@@ -6,6 +6,32 @@
   - ibm.power_aix
 
   tasks:
+  - name: "Check daemons enabled on /etc/rc.tcpip"
+    command: ls /usr/sbin {{ item }}
+    loop:
+    - sendmail
+    - snmp
+    - dhcpcd
+    - dhcprd
+    - dhcpsd
+    - autoconf6
+    - gated
+    - mrouted
+    - named
+    - routed
+    - rwhod
+    - timed
+    - dpid2
+    - hostmibd
+    - snmpmibd
+    - aixmibd
+    - ndpd-host
+    - ndpd-router
+    register: ls /usr/sbin
+    ignore_errors: yes
+    changed_when: false
+
+  tasks:
  - name: Disable daemons from /etc/rc.tcpip
      lineinfile:
        path: /etc/rc.tcpip
@@ -14,7 +40,6 @@
        backrefs: yes
        backup: yes
      loop:
-        - {regexp: '^start /usr/sbin/inetd(.*)$' ,line: '#start /usr/sbin/inetd \g<1>'}
         - {regexp: '^start /usr/lib/sendmail(.*)$' ,line: '#start /usr/lib/sendmail \g<1>'}
         - {regexp: '^start /usr/sbin/snmpd(.*)$' ,line: '#start /usr/sbin/snmpd \g<1>'}
         - {regexp: '^start /usr/sbin/dhcprd(.*)$' ,line: '#start /usr/sbin/dhcprd \g<1>'}
