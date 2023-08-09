@@ -9,12 +9,12 @@
   aixpert:
     mode: save
     level: default
-    norm_fmt_file: /home/kavana/norm.xml
+    norm_fmt_file: /home/mtesta/norm.xml
 
 - name: "Apply using saved profile"
   aixpert:
     mode: apply
-    profile: /home/kavana/norm.xml
+    profile: /home/mtesta/norm.xml
 
 - name: "Undo the settings"
   aixpert:
@@ -23,7 +23,7 @@
 - name: "Check the settings match the provided profile"
   aixpert:
     mode: check
-    profile: /home/kavana/high.xml
+    profile: /home/mtesta/high.xml
 
 - name: "Query the settings"
   aixpert:
