@@ -17,9 +17,9 @@
    # mode: apply
     #profile: /home/mtesta/norm.xml
 
-  - name: "Undo the settings"
-  aixpert:
-    mode: undo
+  #- name: "Undo the settings"
+  #aixpert:
+   # mode: undo
 
   - name: "Check the settings match the provided profile"
   aixpert:
