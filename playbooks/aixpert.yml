@@ -7,10 +7,10 @@
 
   tasks:
   - name: "Save default level rules in normal format"
-  aixpert:
-    mode: save
-    level: default
-    norm_fmt_file: /home/mtesta/norm.xml
+    aixpert:
+     mode: save
+     level: default
+     norm_fmt_file: /home/mtesta/norm.xml
     
  # - name: "Apply using saved profile"
   #aixpert:
