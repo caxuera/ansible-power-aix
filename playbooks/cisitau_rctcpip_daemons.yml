@@ -33,27 +33,27 @@
 
   - name: "Disable daemons from /etc/rc.tcpip"
     lineinfile:
-    path: /etc/rc.tcpip
-    regexp: "{{ item.regexp }}"
-    line: "{{ item.line }}"
-    backrefs: yes
-    backup: yes
-    loop:
-    - {regexp: '^start /usr/lib/sendmail(.*)$' ,line: '#start /usr/lib/sendmail \g<1>'}
-    - {regexp: '^start /usr/sbin/snmpd(.*)$' ,line: '#start /usr/sbin/snmpd \g<1>'}
-    - {regexp: '^start /usr/sbin/dhcprd(.*)$' ,line: '#start /usr/sbin/dhcprd \g<1>'}
-    - {regexp: '^start /usr/sbin/dhcpcd(.*)$' ,line: '#start /usr/sbin/dhcpcd \g<1>'}
-    - {regexp: '^start /usr/sbin/dhcpsd(.*)$' ,line: '#start /usr/sbin/dhcpsd \g<1>'}
-    - {regexp: '^start /usr/sbin/autoconf6(.*)$' ,line: '#start /usr/sbin/autoconf6 \g<1>'}
-    - {regexp: '^start /usr/sbin/gated(.*)$' ,line: '#start /usr/sbin/gated \g<1>'}
-    - {regexp: '^start /usr/sbin/mrouted(.*)$' ,line: '#start /usr/sbin/mrouted \g<1>'}
-    - {regexp: '^start /usr/sbin/named(.*)$' ,line: '#start /usr/sbin/named \g<1>'}
-    - {regexp: '^start /usr/sbin/routed(.*)$' ,line: '#start /usr/sbin/routed \g<1>'}
-    - {regexp: '^start /usr/sbin/rwhod(.*)$' ,line: '#start /usr/sbin/rwhod \g<1>'}
-    - {regexp: '^start /usr/sbin/timed(.*)$' ,line: '#start /usr/sbin/timed \g<1>'}
-    - {regexp: '^start /usr/sbin/dpid2(.*)$' ,line: '#start /usr/sbin/dpid2 \g<1>'}
-    - {regexp: '^start /usr/sbin/hostmibd(.*)$' ,line: '#start /usr/sbin/hostmibd \g<1>'}
-    - {regexp: '^start /usr/sbin/snmpmibd(.*)$' ,line: '#start /usr/sbin/snmpmibd \g<1>'}
-    - {regexp: '^start /usr/sbin/aixmibd(.*)$' ,line: '#start /usr/sbin/aixmibd \g<1>'}
-    - {regexp: '^start /usr/sbin/ndpd-host(.*)$' ,line: '#start /usr/sbin/ndpd-host \g<1>'}
-    - {regexp: '^start /usr/sbin/ndpd-router(.*)$' ,line: '#start /usr/sbin/ndpd-router \g<1>'}
+      path: /etc/rc.tcpip
+      regexp: "{{ item.regexp }}"
+      line: "{{ item.line }}"
+      backrefs: yes
+      backup: yes
+      loop:
+      - {regexp: '^start /usr/lib/sendmail(.*)$' ,line: '#start /usr/lib/sendmail \g<1>'}
+      - {regexp: '^start /usr/sbin/snmpd(.*)$' ,line: '#start /usr/sbin/snmpd \g<1>'}
+      - {regexp: '^start /usr/sbin/dhcprd(.*)$' ,line: '#start /usr/sbin/dhcprd \g<1>'}
+      - {regexp: '^start /usr/sbin/dhcpcd(.*)$' ,line: '#start /usr/sbin/dhcpcd \g<1>'}
+      - {regexp: '^start /usr/sbin/dhcpsd(.*)$' ,line: '#start /usr/sbin/dhcpsd \g<1>'}
+      - {regexp: '^start /usr/sbin/autoconf6(.*)$' ,line: '#start /usr/sbin/autoconf6 \g<1>'}
+      - {regexp: '^start /usr/sbin/gated(.*)$' ,line: '#start /usr/sbin/gated \g<1>'}
+      - {regexp: '^start /usr/sbin/mrouted(.*)$' ,line: '#start /usr/sbin/mrouted \g<1>'}
+      - {regexp: '^start /usr/sbin/named(.*)$' ,line: '#start /usr/sbin/named \g<1>'}
+      - {regexp: '^start /usr/sbin/routed(.*)$' ,line: '#start /usr/sbin/routed \g<1>'}
+      - {regexp: '^start /usr/sbin/rwhod(.*)$' ,line: '#start /usr/sbin/rwhod \g<1>'}
+      - {regexp: '^start /usr/sbin/timed(.*)$' ,line: '#start /usr/sbin/timed \g<1>'}
+      - {regexp: '^start /usr/sbin/dpid2(.*)$' ,line: '#start /usr/sbin/dpid2 \g<1>'}
+      - {regexp: '^start /usr/sbin/hostmibd(.*)$' ,line: '#start /usr/sbin/hostmibd \g<1>'}
+      - {regexp: '^start /usr/sbin/snmpmibd(.*)$' ,line: '#start /usr/sbin/snmpmibd \g<1>'}
+      - {regexp: '^start /usr/sbin/aixmibd(.*)$' ,line: '#start /usr/sbin/aixmibd \g<1>'}
+      - {regexp: '^start /usr/sbin/ndpd-host(.*)$' ,line: '#start /usr/sbin/ndpd-host \g<1>'}
+      - {regexp: '^start /usr/sbin/ndpd-router(.*)$' ,line: '#start /usr/sbin/ndpd-router \g<1>'}
