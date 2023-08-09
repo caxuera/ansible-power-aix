@@ -1,4 +1,10 @@
 ---
+- name: "AIX-CIS-BENCHMARK" 
+  hosts: all
+  gather_facts: no
+  collections:
+  - ibm.power_aix
+  
 - name: "Save default level rules in normal format"
   aixpert:
     mode: save
