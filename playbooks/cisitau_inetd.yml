@@ -1,4 +1,12 @@
- - name: Remove services from inetd.conf
+---
+- name: "AIX-CIS-BENCHMARK" 
+  hosts: all
+  gather_facts: no
+  collections:
+  - ibm.power_aix
+
+  tasks:
+  - name: "Remove services from inetd.conf"
      replace:
        path: /etc/inetd.conf
        regexp: '(^(\w.+)$|^(\s*\w.+)$)'
