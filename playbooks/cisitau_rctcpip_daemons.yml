@@ -31,7 +31,6 @@
     ignore_errors: yes
     changed_when: false
 
-  tasks:
  - name: Disable daemons from /etc/rc.tcpip
      lineinfile:
        path: /etc/rc.tcpip
