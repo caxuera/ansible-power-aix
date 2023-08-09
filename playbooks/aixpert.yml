@@ -6,27 +6,26 @@
   - ibm.power_aix
 
   tasks:
-  
-- name: "Save default level rules in normal format"
+  - name: "Save default level rules in normal format"
   aixpert:
     mode: save
     level: default
     norm_fmt_file: /home/mtesta/norm.xml
-
-- name: "Apply using saved profile"
+    
+  - name: "Apply using saved profile"
   aixpert:
     mode: apply
     profile: /home/mtesta/norm.xml
 
-- name: "Undo the settings"
+  - name: "Undo the settings"
   aixpert:
     mode: undo
 
-- name: "Check the settings match the provided profile"
+  - name: "Check the settings match the provided profile"
   aixpert:
     mode: check
     profile: /home/mtesta/high.xml
 
-- name: "Query the settings"
+  - name: "Query the settings"
   aixpert:
     mode: query
