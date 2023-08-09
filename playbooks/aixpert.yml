@@ -27,5 +27,5 @@
      profile: /home/mtesta/high.xml
 
   - name: "Query the settings"
-   aixpert:
+    aixpert:
      mode: query
