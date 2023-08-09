@@ -8,7 +8,7 @@
   tasks:
   - name: "Remove services from inetd.conf"
     replace:
-    path: /etc/inetd.conf
-    regexp: '(^(\w.+)$|^(\s*\w.+)$)'
-    replace: '# \g<1>'
-    backup: yes
+     path: /etc/inetd.conf
+     regexp: '(^(\w.+)$|^(\s*\w.+)$)'
+     replace: '# \g<1>'
+     backup: yes
