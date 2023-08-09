@@ -31,7 +31,7 @@
     ignore_errors: yes
     changed_when: false
 
- - name: Disable daemons from /etc/rc.tcpip
+ - name: "Disable daemons from /etc/rc.tcpip"
      lineinfile:
        path: /etc/rc.tcpip
        regexp: "{{ item.regexp }}"
