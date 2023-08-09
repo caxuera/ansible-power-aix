@@ -38,7 +38,7 @@
       line: "{{ item.line }}"
       backrefs: yes
       backup: yes
-      loop:
+    loop:
       - {regexp: '^start /usr/lib/sendmail(.*)$' ,line: '#start /usr/lib/sendmail \g<1>'}
       - {regexp: '^start /usr/sbin/snmpd(.*)$' ,line: '#start /usr/sbin/snmpd \g<1>'}
       - {regexp: '^start /usr/sbin/dhcprd(.*)$' ,line: '#start /usr/sbin/dhcprd \g<1>'}
