@@ -27,7 +27,7 @@
     - aixmibd
     - ndpd-host
     - ndpd-router
-    register: ls /usr/sbin
+    register: ls
     ignore_errors: yes
     changed_when: false
 
