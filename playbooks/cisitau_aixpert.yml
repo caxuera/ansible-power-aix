@@ -24,7 +24,7 @@
   - name: "Check the settings match the provided profile"
     aixpert:
      mode: check
-     profile: /home/mtesta/high.xml
+     profile: /home/mtesta/norm.xml
 
   - name: "Query the settings"
     aixpert:
