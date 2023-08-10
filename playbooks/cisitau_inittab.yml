@@ -33,5 +33,5 @@
    command: rmitab {{ item.item }}
    loop: "{{ lsitab.results }}"
     when: item.rc == 0
-    loop_control:
-    label: "{{ item.item }}"
+     loop_control:
+     label: "{{ item.item }}"
