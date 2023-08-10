@@ -11,12 +11,17 @@
      mode: save
      level: default
      norm_fmt_file: /home/mtesta/norm.xml
+
+  - name: "Save high level rules in normal format"
+    aixpert:
+     mode: save
+     level: high
+     norm_fmt_file: /home/mtesta/high.xml
     
   - name: "Apply using saved profile"
     aixpert:
      mode: apply
      profile: /home/mtesta/norm.xml
-     result:  "{{stderr}}"
 
   - name: "Undo the settings"
     aixpert:
@@ -25,7 +30,7 @@
   - name: "Check the settings match the provided profile"
     aixpert:
      mode: check
-     profile: /home/mtesta/norm.xml
+     profile: /home/mtesta/high.xml
 
   - name: "Query the settings"
     aixpert:
