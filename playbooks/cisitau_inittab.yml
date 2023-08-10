@@ -26,7 +26,17 @@
   - name: "Remove daemons from inittab"
     inittab:
       state: absent
-      name: writesrv i4ls pmd httpdlite rcnfs rcncs qdaemon lpd piobe dt
+      name: 
+      - writesrv 
+      - i4ls 
+      - pmd 
+      - httpdlite 
+      - rcnfs 
+      - rcncs 
+      - qdaemon 
+      - lpd 
+      - piobe 
+      - dt
       #command: "{{rmitab}}"
 
  #- name: "Remove daemons from inittab"
