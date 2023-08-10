@@ -5,6 +5,8 @@
   collections:
   - ibm.power_aix
 
+vars:
+
   tasks:
   - name: "Check daemons enabled on innitab"
     command: lsitab {{ item }}
@@ -22,13 +24,12 @@
     register: lsitab
     ignore_errors: yes
     changed_when: false
-
-  #- name: "Remove daemons from inittab"
-   # inittab:
-    #  state: absent
-     # name: 
-       #command: "{{rmitab}}"
-
+      
+  - name: "Remove entry for inittab daemons" 
+      inittab:
+        state: absent
+        name: "{{inittab_v}}"
+        
   - name: "Remove daemons from inittab"
     command: rmitab {{ item.item }}
     loop: "{{ lsitab.results }}"
