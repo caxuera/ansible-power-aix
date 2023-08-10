@@ -27,7 +27,7 @@
     inittab:
       state: absent
       name: "{{ lsitab.results }}"
-        #command: "{{cmd}}"
+      command: "{{rmitab}}"
 
  #- name: "Remove daemons from inittab"
   # command: rmitab {{ item.item }}
