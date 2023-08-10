@@ -17,7 +17,6 @@
      mode: apply
      profile: /home/mtesta/norm.xml
      stdout: 
-      type: lines 
 
   - name: "Undo the settings"
     aixpert:
