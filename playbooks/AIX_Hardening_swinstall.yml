@@ -4,9 +4,12 @@
     raw: "rpm -q --quiet dnf && echo true || echo false"
     register: dnf_exists
 
+  - name: Check for existence of yum
+    raw: "rpm -q --quiet yum && echo true || echo false"
+
   - name: End play if inventory host doesn't have yum installed
     meta: end_host
-    when: dnf_exists.stdout is search("false")
+    when: yum_exists.stdout is search("false")
 
 # EXPAND target paths
   - name: Expand /var target directory (+100M)
@@ -21,7 +24,7 @@
       attributes: size=+400M
       state: present
 
-# INSTALL using dnf
+# INSTALL using yum
   - name: Install/ Update python and requisite rpms
     dnf:
       name: python
