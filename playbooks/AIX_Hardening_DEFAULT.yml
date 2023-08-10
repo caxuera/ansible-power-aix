@@ -8,12 +8,12 @@
   tasks:
   - name: "Run AIXPERT DEFAULT SECURITY RULES for host {{ inventory_hostname }}"
     command: "aixpert -l default"
-    register: stderr
+    register: stdout
 
   - name: "Show AIXPERT DEFAULT Results"
     debug:
-      var: stderr
+      var: stdout
 
   - name: "Set AIXPERT DEFAULT Results"
     set_fact: 
-      result:  "{{stderr}}"
+      result:  "{{stdout}}"
