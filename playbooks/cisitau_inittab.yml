@@ -24,9 +24,9 @@
     changed_when: false
 
   - name: "Remove daemons from inittab"
-      inittab:
-        state: absent
-        name: "{{ item.item }}"
+    inittab:
+      state: absent
+      name: "{{ item.item }}"
         #command: "{{cmd}}"
 
   #- name: "Remove daemons from inittab"
