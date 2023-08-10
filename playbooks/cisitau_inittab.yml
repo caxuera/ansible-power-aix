@@ -26,7 +26,7 @@
   - name: "Remove daemons from inittab"
     inittab:
       state: absent
-      name: "{{ lsitab  }}"
+      name: "{{ item.item  }}"
         #command: "{{cmd}}"
 
  #- name: "Remove daemons from inittab"
