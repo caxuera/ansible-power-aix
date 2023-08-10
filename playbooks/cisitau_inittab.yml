@@ -2,6 +2,9 @@
 - name: "AIX-CIS-BENCHMARK" 
   hosts: all
   gather_facts: no
+  #vars:
+    #cmd: '/usr/sbin/rmitab'
+    #inittab_v: uprintfd
   collections:
   - ibm.power_aix
 
@@ -29,6 +32,7 @@ vars:
       inittab:
         state: absent
         name: "{{inittab_v}}"
+        #command: {{cmd}}
         
   - name: "Remove daemons from inittab"
     command: rmitab {{ item.item }}
