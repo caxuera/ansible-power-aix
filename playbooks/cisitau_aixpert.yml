@@ -31,7 +31,7 @@
     aixpert:
      mode: query
 
-   - name: "Apply using saved profile"
+  - name: "Apply using saved profile"
     aixpert:
      mode: apply
      profile: /home/mtesta/norm.xml
