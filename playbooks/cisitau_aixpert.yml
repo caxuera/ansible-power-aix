@@ -22,7 +22,6 @@
     aixpert:
      mode: apply
      profile: /home/mtesta/norm.xml
-     stderr: stderr_lines
 
   - name: "Undo the settings"
     aixpert:
