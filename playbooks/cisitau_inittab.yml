@@ -26,12 +26,12 @@
   - name: "Remove daemons from inittab"
     inittab:
       state: absent
-      name: "{{ lsitab }}"
+      name: "{{ lsitab.results }}"
         #command: "{{cmd}}"
 
  #- name: "Remove daemons from inittab"
-  #  command: rmitab {{ item.item }}
-   # loop: "{{ lsitab.results }}"
+  # command: rmitab {{ item.item }}
+   #loop: "{{ lsitab.results }}"
     #  when: item.rc == 0
      #  loop_control:
       # label: "{{ item.item }}"
