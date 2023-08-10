@@ -17,11 +17,6 @@
      mode: save
      level: high
      norm_fmt_file: /home/mtesta/high.xml
-    
-  - name: "Apply using saved profile"
-    aixpert:
-     mode: apply
-     profile: /home/mtesta/norm.xml
 
   - name: "Undo the settings"
     aixpert:
@@ -35,3 +30,8 @@
   - name: "Query the settings"
     aixpert:
      mode: query
+
+   - name: "Apply using saved profile"
+    aixpert:
+     mode: apply
+     profile: /home/mtesta/norm.xml
