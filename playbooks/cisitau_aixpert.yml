@@ -16,7 +16,7 @@
     aixpert:
      mode: apply
      profile: /home/mtesta/norm.xml
-     stdout: 
+     result:  "{{stderr}}"
 
   - name: "Undo the settings"
     aixpert:
