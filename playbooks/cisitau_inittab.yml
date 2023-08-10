@@ -23,6 +23,12 @@
     ignore_errors: yes
     changed_when: false
 
+  - name: "Remove daemons from inittab"
+      inittab:
+        state: absent
+        name: "{{ item.item }}"
+        #command: "{{cmd}}"
+
   #- name: "Remove daemons from inittab"
    # command: rmitab {{ item.item }}
    # loop: "{{ lsitab.results }}"
