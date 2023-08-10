@@ -1,5 +1,5 @@
 ---
-- name: "AIX-CIS-BENCHMARK" 
+- name: "AIX-CIS-BENCHMARK USING AIXPERT MODULE" 
   hosts: all
   gather_facts: no
   collections:
