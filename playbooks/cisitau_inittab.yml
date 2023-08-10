@@ -26,8 +26,8 @@
   - name: "Remove daemons from inittab"
     inittab:
       state: absent
-      name: "{{ lsitab.results }}"
-      command: "{{rmitab}}"
+      name: writesrv i4ls pmd httpdlite rcnfs rcncs qdaemon lpd piobe dt
+      #command: "{{rmitab}}"
 
  #- name: "Remove daemons from inittab"
   # command: rmitab {{ item.item }}
