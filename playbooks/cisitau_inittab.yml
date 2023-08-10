@@ -4,11 +4,19 @@
   gather_facts: no
   #vars:
     #cmd: '/usr/sbin/rmitab'
-    #inittab_v: uprintfd
+    #inittab_v: 
+    #- "wrtitesrv"
+    #- "i4ls"
+    #- "pmd"
+    #- "httpdlite"
+    #- "rcnfs"
+    #- "rcncs"
+    #- "qdaemon"
+    #- "lpd"
+    #- "piobe"
+    #- "dt" 
   collections:
   - ibm.power_aix
-
-vars:
 
   tasks:
   - name: "Check daemons enabled on innitab"
@@ -28,10 +36,10 @@ vars:
     ignore_errors: yes
     changed_when: false
       
-  - name: "Remove entry for inittab daemons" 
-      inittab:
-        state: absent
-        name: "{{inittab_v}}"
+  #- name: "Remove entry for inittab daemons" 
+   #   inittab:
+    #    state: absent
+     #   name: "{{inittab_v}}"
         #command: {{cmd}}
         
   - name: "Remove daemons from inittab"
