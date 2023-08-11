@@ -19,7 +19,7 @@
      norm_fmt_file: /home/mtesta/high.xml
 
   - name: "Check and log security settings for host {{ inventory_hostname }}"
-    command: "aixpert -c -p"
+    command: "tail -100 /etc/security/aixpert/check_report.txt"
     register: stdout
 
   #- name: "Apply using saved profile"
